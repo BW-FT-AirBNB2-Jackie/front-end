@@ -5,6 +5,7 @@ import Auth from './components/Auth';
 import Home from './components/Home';
 import {BrowserRouter as Router, Route } from 'react-router-dom'
 import CreateListing from './components/CreateListing'
+import BrowseListings from './components/BrowseListings';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
      <Route exact path='/auth' component={ Auth } />
      <Route exact path='/' render={props => <Home {...props} />} />
      <Route exact path='/createlisting' render={props => <CreateListing {...props} />} />
+     <Route exact path='/browselistings' render={props => <BrowseListings {...props} />} />
      </Router>
     </div>
   );
