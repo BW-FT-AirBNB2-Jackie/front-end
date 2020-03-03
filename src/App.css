@@ -107,4 +107,8 @@ img {
   height: 100%;
 }
 
+.label{
+  padding-right: 30px;
+  
+}
 /* end login form styling */

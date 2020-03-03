@@ -19,15 +19,15 @@ const Login = ({ values, errors, touched, status }) => {
 <div>
     <Form  className="login-form">
       <FormGroup>
-        <Label>Username:</Label>
+        <Label >Username:</Label>
         <Field id="username" type="text" name="username" placeholder="Username"/>
         {touched.username && errors.username && (<p>{errors.username}</p>)}
         
-        <Label>Password:</Label>
+        <Label >Password:</Label>
         <Field id="password" type="password" name="password" placeholder="Password"/>
         {touched.password && errors.password && (<p>{errors.password}</p>)}
         <br/>
-        <Label>Email:</Label>
+        <Label className="label">Email:</Label>
         <Field id="email" type="email" name="email" placeholder="Email"/>
         {touched.email && errors.email && (<p>{errors.email}</p>)}
 
