@@ -39,4 +39,3 @@ const CreateListing = (props) => {
     
    
     export default CreateListing;
-

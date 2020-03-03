@@ -16,7 +16,6 @@ function Home(props) {
         <div className="wrapper">
         <div className="home">
             <h1>Find Your Destination</h1>
-
             <img src="/imgs/camper.png" alt="" />
           <Button onClick={handleCreateButton} color="danger" size="lg" block>Create Listing</Button>
           <h2>  OR  </h2>
