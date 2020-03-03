@@ -1,30 +1,51 @@
-import React from 'react';
-import { Button, Form, FormGroup, FormText, Label, Input } from "reactstrap";
+import React, { useState, useEffect } from 'react'
+import { Container, Button, Form, FormGroup, Label, Input } from 'reactstrap'
 
 
-const CreateListing = (props) => {
-    console.log(props);
+const CreateListing = ({ status }) => {
+    const [addListing, setAddListing] = useState([]);
+  
+    useEffect(() => {
+      if (status) {
+        setAddListing([...addListing, status]);
+      }
+    }, [addListing, status]);
+
+
     return (
-        <div>
-        <Form className="login-form">
-            <FormGroup>
-                <Label>Location</Label>
-                <Input type="text" name="location" placeholder="Location"/>
-                <Label>Description</Label>
-                <Input type="textarea" name="description" placeholder="Description"/>
-                <Label>Price Per Day</Label>
-        <       Input type="text" name="price" placeholder=" Price Per Day"/>
-                <Label>Image</Label>
-                <Input type="file" name="image" placeholder="Description"/>
-                <FormText color="muted">
-                Please upload a picture of your location you plan to list.
-                </FormText>
-            </FormGroup>
-            <Button type="submit">Create Listing</Button>
-        </Form>
-        </div>
-        );
-    }
-    
-    export default CreateListing;
+        <Container className="create">
+      <Form>
+      <FormGroup>
+          <h1>Create a listing for your land:</h1>
+        <Label for='address'>Address</Label>
+        <Input type='text' minLength='3' maxLength='20' required={true} placeholder="Address"/>
+      </FormGroup>
+      <FormGroup>
+        <Label for='zipcode'>Zip Code</Label>
+        <Input type='zipcode' minLength='4' required={true} placeholder="Zip Code"  />
+      </FormGroup>
+      <FormGroup>
+        <Label for='price'>Price Per Night</Label>
+        <Input type='price' minLength='4' required={true} placeholder="Price Per Night"  />
+      </FormGroup>
+      <FormGroup>
+        <Label for="description">Description</Label>
+        <Input type="textarea" name="text" id="exampleText" placeholder="Describe your land" />
+      </FormGroup>
+      <FormGroup>
+      <Label for="date">Start Date</Label>
+        <Input type="date" name="date" id="date" placeholder="Insert Date" />
+      </FormGroup>
+      <FormGroup>
+      <Label for="date">End Date</Label>
+        <Input type="date" name="date" id="date" placeholder="Insert Date" />
+      </FormGroup>
+      <Button>Submit</Button>
+    </Form>
+    </Container>
 
+    );
+  }
+
+
+export default CreateListing

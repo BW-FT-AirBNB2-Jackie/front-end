@@ -60,13 +60,14 @@ const FormikLogin = withFormik({
       password: Yup.string().required(),
       email: Yup.string().required()
   }),
-  handleSubmit(values, { setStatus, resetForm }) {
+  handleSubmit(values, { setStatus, resetForm, props }) {
       console.log("submitting", values);
       axios.post("https://rvbnb2.herokuapp.com/api/auth/landowners/login", values)
       .then(response => {
           console.log("success", response)
           setStatus(response.data);
           resetForm();
+          return props.history.push("/createlisting");
       })
       .catch(error => console.log(error.response));
   }
@@ -74,3 +75,4 @@ const FormikLogin = withFormik({
 
 
 export default FormikLogin;
+
