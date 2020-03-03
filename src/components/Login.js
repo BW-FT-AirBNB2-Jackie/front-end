@@ -34,7 +34,7 @@ const Login = ({ values, errors, touched, status }) => {
       </FormGroup>
       <Button type="submit">Log in</Button>
     </Form>
-    <pre>{JSON.stringify(values, null, 2)}</pre>
+    {/* <pre>{JSON.stringify(values, null, 2)}</pre> */}
         {login.map(login => (
             <ul key ={login.id}>
                 <li>Username: {login.username}</li>
