@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Container, Button, Form, FormGroup, Label, Input } from 'reactstrap'
-import axios from 'axios';
+
 
 const CreateListing = ({ status }) => {
     const [addListing, setAddListing] = useState([]);
@@ -10,11 +10,6 @@ const CreateListing = ({ status }) => {
         setAddListing([...addListing, status]);
       }
     }, [addListing, status]);
-
-    const handleSubmit = e => {
-
-    }
-
 
 
     return (
