@@ -6,7 +6,7 @@ const BrowseListings = (props) => {
         <div>
             <Form className="login-form">
                 <FormGroup>
-                    <Label>Search Listings</Label>
+                    <Label>Search Listings:</Label>
                     <Input type="text" placeholder="Search By Location"></Input>
                 </FormGroup>
             </Form>
