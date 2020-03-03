@@ -96,3 +96,19 @@ img {
   justify-content: center;
   align-items: center;
 }
+
+/* login form styling */
+
+.login-form {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+  height: 100%;
+}
+
+.label{
+  padding-right: 30px;
+  
+}
+/* end login form styling */
