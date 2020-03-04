@@ -27,9 +27,9 @@ const Login = ({ values, errors, touched, status }) => {
         <Field id="password" type="password" name="password" placeholder="Password"/>
         {touched.password && errors.password && (<p>{errors.password}</p>)}
         <br/>
-        {/* <Label className="label">Email:</Label>
+        <Label className="label">Email:</Label>
         <Field id="email" type="email" name="email" placeholder="Email"/>
-        {touched.email && errors.email && (<p>{errors.email}</p>)} */}
+        {touched.email && errors.email && (<p>{errors.email}</p>)}
 
       </FormGroup>
       <Button type="submit">Log in</Button>
@@ -39,7 +39,7 @@ const Login = ({ values, errors, touched, status }) => {
             <ul key ={login.id}>
                 <li>Username: {login.username}</li>
                 <li>Password: {login.password}</li>
-                {/* <li>Email: {login.email}</li> */}
+                <li>Email: {login.email}</li>
             </ul>
         ))}
 </div>
