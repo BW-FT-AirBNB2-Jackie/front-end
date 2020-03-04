@@ -6,6 +6,8 @@ import Home from './components/Home';
 import {BrowserRouter as Router, Route } from 'react-router-dom'
 import CreateListing from './components/CreateListing'
 import BrowseListings from './components/BrowseListings';
+import Users from './Search/Users'
+import Owners from './Search/Owners'
 
 
 function App() {
@@ -18,6 +20,8 @@ function App() {
      <Route exact path='/' render={props => <Home {...props} />} />
      <Route exact path='/createlisting' render={props => <CreateListing {...props} />} />
      <Route exact path='/browselistings' render={props => <BrowseListings {...props} />} />
+     <Route exact path='/Users' render={props => <Users {...props} />} />
+     <Route exact path='/Owners' render={props => <Owners {...props} />} />
      </Router>
     </div>
   );

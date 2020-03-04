@@ -23,6 +23,12 @@ const Navigation = (props) => {
         <NavItem>
           <NavLink href="/auth" >Sign Up</NavLink>
         </NavItem>
+        <NavItem>
+          <NavLink href="/Users" >Users</NavLink>
+        </NavItem>
+        <NavItem>
+          <NavLink href="/Owners" >Land Owners</NavLink>
+        </NavItem>
       </Nav>
       <div className="dark-mode__toggle">
         <div
