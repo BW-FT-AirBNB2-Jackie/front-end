@@ -11,7 +11,7 @@ const CreateListing = (props) => {
             location: "Your location listing will go here!",
             description: "Description of your location.",
             price: "How much patrons will pay per hour.",
-            image: "https://images.unsplash.com/photo-1523987355523-c7b5b0dd90a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+            image: "https://images.unsplash.com/photo-1563445046951-2e6adb308c9b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
             
         }
     ])

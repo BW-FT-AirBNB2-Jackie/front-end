@@ -19,8 +19,9 @@ const ListingForm = props => {
         setListing({location: "", description: "", price: ""});
     };
     return(
+<div>
     <Form onSubmit={submitListing} className="login-form">
-    <FormGroup>
+    <FormGroup className="input-form">
         <Label>Location</Label>
         <Input type="text" name="location" placeholder="Location" onChange={handleChanges} value={listing.location}/>
         <Label>Description</Label>
@@ -29,12 +30,13 @@ const ListingForm = props => {
 <       Input type="text" name="price" placeholder=" Price Per Day" onChange={handleChanges} value={listing.price}/>
         <Label>Image</Label>
         <Input type="file" name="image" placeholder="Description" onChange={handleChanges} value={listing.image}/>
-        <FormText color="muted">
+        <FormText color="black">
         Please upload a picture of your location you plan to list.
         </FormText>
     </FormGroup>
     <Button type="submit">Create Listing</Button>
 </Form>
+</div>
     );
 }
 export default ListingForm;
