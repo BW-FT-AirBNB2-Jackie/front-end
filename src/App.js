@@ -3,12 +3,11 @@ import './App.css';
 import Navigation from './components/Navigation';
 import Auth from './components/Auth';
 import Home from './components/Home';
-import {BrowserRouter as Router, Route } from 'react-router-dom'
+import {BrowserRouter as Router, Route, } from 'react-router-dom'
 import CreateListing from './components/CreateListing'
 import BrowseListings from './components/BrowseListings';
 import Users from './Search/Users'
 import Owners from './Search/Owners'
-
 
 function App() {
   return (
