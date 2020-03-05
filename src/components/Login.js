@@ -2,8 +2,7 @@ import { Button, Form, FormGroup, Label } from "reactstrap";
 import React, { useState, useEffect } from "react";
 import { Field, withFormik } from "formik";
 import * as Yup from 'yup';
-import axios from "axios";
-
+import { loginUser } from '../actions/index'
 
 
 const Login = ({ values, errors, touched, status }) => {
@@ -39,7 +38,7 @@ const Login = ({ values, errors, touched, status }) => {
             <ul key ={login.id}>
                 <li>Username: {login.username}</li>
                 <li>Password: {login.password}</li>
-                <li>Email: {login.email}</li>
+                <li>Email: {login.email}</li> 
             </ul>
         ))}
 </div>
@@ -60,17 +59,16 @@ const FormikLogin = withFormik({
       password: Yup.string().required(),
       email: Yup.string().required()
   }),
-  handleSubmit(values, { setStatus, resetForm }) {
-      console.log("submitting", values);
-      axios.post("https://rvbnb2.herokuapp.com/api/auth/landowners/login", values)
-      .then(response => {
-          console.log("success", response)
-          setStatus(response.data);
-          resetForm();
-      })
-      .catch(error => console.log(error.response));
+  handleSubmit: (values) => {
+    let userObj = {
+      username: values.username,
+      password: values.password,
+      email: values.email
+    };
+    console.log(userObj)
+    loginUser(userObj)
   }
 })(Login);
 
-
 export default FormikLogin;
+
