@@ -6,7 +6,7 @@ import Login from './Login'
 
 const Auth = props => {
 
- 
+
     const [activeTab, setActiveTab] = useState('1');
     const toggle = tab => {
         if(activeTab !== tab) setActiveTab(tab);
@@ -44,7 +44,7 @@ return (
             <TabPane tabId="1">
                 <Row>
                     <Col sm="12">
-                        <Jumbotron>
+                        <Jumbotron >
                             <Login />
                         </Jumbotron>
                     </Col>

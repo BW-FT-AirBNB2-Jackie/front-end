@@ -27,7 +27,7 @@ const BrowseListings = (props) => {
     return (
         <div>
             <Form className="login-form">
-                <FormGroup>
+                <FormGroup className="input-form">
                     <Label>Search Listings:</Label>
                     <Input type="text" placeholder="Search By Location" onChange={handleChange} value={query}></Input>
                 </FormGroup>
@@ -39,7 +39,7 @@ const BrowseListings = (props) => {
                         <h2>{data.location}</h2>
                         <h4>{data.description}</h4>
                         <h4>${data.price} per hour</h4>
-                        <img src={data.image} alt="location-spot"/>
+                        <img className="browse-img" src={data.image} alt="location-spot"/>
                         <h4>Start Date: {data.start_date}</h4>
                         <h4>End Date: {data.end_date}</h4>
                     </div>
